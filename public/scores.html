@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA INSIGHTS</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet"
+        href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.10.1.min.css?ver=4.10.1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scores.css">
+
+    <!-- needed libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+
+    <script defer type="module" src="js/page.js"></script>
+    <script defer type="module" src="js/debouncing.js"></script>
+
+
+</head>
+
+<body>
+  <script>
+  /**
+   * Helper function to get today's date
+   */
+  function getTodayDate() {
+      var today = new Date();
+      today.setDate(today.getDate() - 1);
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+      return yyyy + '-' + mm + '-' + dd;
+  }
+
+  async function getMatches() {
+      let weekAgo = new Date();
+      weekAgo.setDate(weekAgo.getDate() - 7);
+      var dd = String(weekAgo.getDate()).padStart(2, '0');
+      var mm = String(weekAgo.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = weekAgo.getFullYear();
+      weekAgo = yyyy + '-' + mm + '-' + dd;
+
+      // get the current games
+      const results = await axios({
+          method: 'get',
+          url: 'https://www.balldontlie.io/api/v1/games',
+          params: {
+              'start_date': weekAgo,
+              'end_date': getTodayDate(),
+              'per_page': 35
+          }
+      });
+      // add results to div
+      const matchups = results.data.data;
+      matchups.forEach((matchup) => {
+              if(matchup.period != 0){
+                  let t1 = "NBA_Logos-master/" + matchup.home_team.city.toLowerCase() + ".png";
+                  let t2 = "NBA_Logos-master/" + matchup.visitor_team.city.toLowerCase() + ".png";
+
+                  $('#scoreFeed').append(`<div class="card-content scoreCards" style="text-align: center">
+                  <img src="${t1}" alt="Avatar" class="md-avatar rounded-circle">
+                  <span>
+                      ${matchup.home_team.full_name} vs. ${matchup.visitor_team.full_name}</span>
+                  <img src="${t2}" alt="Avatar" class="md-avatar rounded-circle">
+                      <span style="font-size: 16px; text-transform: uppercase"> <br />
+                      ${matchup.status}: ${matchup.time}
+                      ${matchup.home_team_score} - ${matchup.visitor_team_score}
+                      <br />
+                          ${new Date(matchup.date)}
+                      </span>
+                  </div>`);
+              }
+
+      });
+  }
+
+  $(document).ready(() => {
+      getMatches();
+  });
+  </script>
+    <!-- NAV MENU -->
+    <nav class="navbar navbar-light navbar-expand-md custom-header">
+        <div class="container-fluid">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a role="button" id="logo" href="/">
+                    </a>
+                </div>
+
+                <a role="button" class="navbar-burger burger" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="scores.html">SCORES</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="news.html">NEWS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="TeamStats.html">TEAM STATS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="playerstats.html">PLAYER STATS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="standings.html">STANDINGS</a></li>
+
+
+                    <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="#">TEAMS </a></li> -->
+                  <!--  <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="predictions.html">
+                            PREDICTIONS
+                            <span class="badge badge-pill badge-primary"> new</span></a></li> -->
+                    <li class="nav-item" role="presentation">
+                    </li>
+                </ul>
+
+                <div class="navbar-item ml-auto" id="nav-buttons">
+                    <div class="buttons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAV MENU -->
+
+    <!-- HEADER -->
+    <header class="overlay">
+        <header class="cs-header">
+            <h1 class="cs-header-title">Game Scores</h1>
+        </header>
+    </header>
+    <!-- BEGIN SCORE CARD DIVS-->
+    <section class="section">
+        <div class="container">
+            <div class="cardFeed" id="scoreFeed">
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

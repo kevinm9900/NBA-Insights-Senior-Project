@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+
+<style>
+    html
+    {
+        margin: 0;
+        background-color: black;
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    }
+
+    body
+    {
+        animation: fadeInAnimation ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        height: 100%;
+    }
+
+    @keyframes fadeInAnimation
+    {
+        0%
+        {
+            opacity: 0;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+
+    /*a top banner for each page*/
+    .topBanner
+    {
+        position: absolute;
+        overflow: hidden;
+        background-color: black;
+        color: black;
+        width: 100%;
+        height: 50px;
+        margin-top: -4.5%;
+        margin-left: -0.40%;
+    }
+
+    /*without a comma, this CSS will apply to all "anchor" tags inside a div*/
+    .topBanner a
+    {
+        transition: color 0.5s ease;
+        color: #cfcfcf;
+        text-align: center;
+        font-size: 30px;
+        padding: 0px 75px;
+        margin-left: 10%;
+        text-decoration: none;
+        max-width: 100px;
+    }
+
+    .topBanner a:hover
+    {
+        color: white;
+    }
+
+    .newsContainer
+    {
+        position: relative;
+        width: 100%;
+    }
+
+    .card
+    {
+        border-color: white;
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+        width: 27%;
+        /* overflow: hidden; */
+    }
+
+    .card:hover
+    {
+        box-shadow: 0 4px 16px 0 white;
+    }
+
+    .container
+    {
+        height: 300px;
+        position: relative;
+        background-color: #36454F;
+        padding: 2px 16px;
+    }
+
+    .container h4
+    {
+        position: relative;
+        font-weight: bold;
+        font-size: 25px;
+        max-width: 100%;
+        color: white;
+        display: block;
+    }
+
+    .container p
+    {
+        position: relative;
+        font-size: 18px;
+        color: white;
+        max-height: 125px;
+        overflow-y: hidden;
+    }
+
+    .credits
+    {
+        position: absolute;
+        text-decoration: none;
+        font-family: inherit;
+        color: white;
+        font-size: 20px;
+        margin-left: 45%;
+        bottom: 2%;
+    }
+</style>
+
+
+<html lang="en">
+    <head>
+        <title>News</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <main>
+            <div class="topBanner">
+                <a href="index.html">Home</a>
+            </div>
+
+            <div style="width: 100%; max-height: 100%; border-color: white;">
+                <a href="#" target="_blank" id="link1" style="text-decoration: none;">
+                    <div id="newsCard1" class="card" style="margin-left: 7%; margin-top: 5%;">
+                        <div class="container">
+                            <h4 id="headline1">News 1</h4>
+                            <p id="description1">Something</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="width: 100%; max-height: 100%; border-color: white;">
+                <a href="#" target="_blank" id="link2" style="text-decoration: none;">
+                    <div id="newsCard2" class="card" style="margin-left: 37%; margin-top: -305px;">
+                        <div class="container">
+                            <h4 id="headline2">News 2</h4>
+                            <p id="description2">Something</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="width: 100%; max-height: 100%; border-color: white;">
+                <a href="#" target="_blank" id="link3" style="text-decoration: none;">
+                    <div id="newsCard3" class="card" style="margin-left: 67%; margin-top: -305px;">
+                        <div class="container">
+                            <h4 id="headline3">News 3</h4>
+                            <p id="description3">Something</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="width: 100%; max-height: 100%; border-color: white;">
+                <a href="#" target="_blank" id="link4" style="text-decoration: none;">
+                    <div id="newsCard4" class="card" style="margin-left: 7%; margin-top: 5%;">
+                        <div class="container">
+                            <h4 id="headline4">News 4</h4>
+                            <p id="description4">Something</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="width: 100%; max-height: 100%; border-color: white;">
+                <a href="#" target="_blank" id="link5" style="text-decoration: none;">
+                    <div id="newsCard5" class="card" style="margin-left: 37%; margin-top: -305px;">
+                        <div class="container">
+                            <h4 id="headline5">News 5</h4>
+                            <p id="description5">Something</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="width: 100%; max-height: 100%; border-color: white;">
+                <a href="#" target="_blank" id="link6" style="text-decoration: none;">
+                    <div id="newsCard6" class="card" style="margin-left: 67%; margin-top: -305px;">
+                        <div class="container">
+                            <h4 id="headline6">News 6</h4>
+                            <p id="description6">Something</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <a href="https://www.espn.com/" target="_blank" class="credits">Data Provided By ESPN</a>
+        </main>
+    </body>
+
+    <script>
+        getData();
+        async function getData()
+        {
+            const api_url = "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/news";
+            const response = await fetch(api_url);
+            const json = await response.json();
+
+            // console.log(json);
+            // console.log(json.articles);
+
+            for (var i = 0; i < json.articles.length; i++)
+            {
+                document.getElementById("headline" + String(i + 1)).innerHTML = json.articles[i]['headline'];
+                document.getElementById("description" + String(i + 1)).innerHTML = json.articles[i]['description'];
+                document.getElementById("link" + String(i + 1)).href = json.articles[i].links.web.href;
+            }
+        }
+
+    </script>
+</html>

@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>NBA INSIGHTS</title>
+  <link rel="stylesheet" href="standings.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <!-- NAV MENU -->
+    <nav class="navbar navbar-light navbar-expand-md custom-header">
+        <div class="container-fluid">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a role="button" id="logo" href="/">
+                    </a>
+                </div>
+
+                <a role="button" class="navbar-burger burger" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">HOME</a></li>
+
+                    <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="#">TEAMS </a></li> -->
+                  <!--  <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="predictions.html">
+                            PREDICTIONS
+                            <span class="badge badge-pill badge-primary"> new</span></a></li> -->
+                    <li class="nav-item" role="presentation">
+                    </li>
+                </ul>
+
+                <div class="navbar-item ml-auto" id="nav-buttons">
+                    <div class="buttons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAV MENU -->
+    <title></title>
+  </head>
+  <body>
+    <table id="standings-table_east" class="standings scroll standings__order-conference">
+      <caption class="standings__header">
+        <span>Eastern Conference</span>
+      </caption>
+      <thead>
+        <tr>
+          <th class="columns">
+            <span>Team</span>
+          </th>
+          <th class="columns">
+            <abbr>W</abbr>
+          </th>
+          <th class="columns">
+            <abbr>L</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Win%</abbr>
+          </th>
+          <th class="columns">
+            <abbr>GB</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Conf</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Div</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Home</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Road</abbr>
+          </th>
+          <th class="columns">
+           <abbr>OT</abbr>
+          </th>
+          <th class="columns">
+            <abbr>L10</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Streak</abbr>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/milwaukee.png">
+            <span>Milwaukee</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            45
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            17
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .726
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            26 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            27 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            18 - 12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            10 - 0
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 16
+          </td>
+        </tr>
+        <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/boston.png">
+            <span>Celtics</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            45
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            17
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .714
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            0.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            28 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            25 - 7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            20 - 11
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            8 - 2
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/philadelphia.png">
+            <span>76ers</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            40
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            22
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .645
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            23 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            24 - 10
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            16 - 12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            6 - 4
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/cleveland.png">
+            <span>Cavaliers</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            39
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            26
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .600
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            7.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            23 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            26 - 7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            13 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            6 - 4
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/new york.png">
+            <span>Knicks</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            37
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            27
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .578
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            9
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            26 - 16
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            19 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            18 - 12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            9 - 1
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 7
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/brooklyn.png">
+            <span>Brooklyn</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            34
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            28
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .548
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            11
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            24 - 17
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            18 - 12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            16 - 16
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            2 - 8
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 4
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/miami.png">
+            <span>Heat</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            33
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            30
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .524
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            12.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            16 - 20
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            19 - 11
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            14 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            4 - 6
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/atlanta.png">
+            <span>Hawks</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            31
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            31
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .500
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            14
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            19 - 20
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            17 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            14 - 18
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            5 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/toronto.png">
+            <span>Raptors</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            31
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            33
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .484
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            19 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            20 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            11 - 20
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            7 - 3
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/washington.png">
+            <span>Wizards</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            30
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            32
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .484
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            17 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            15 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            15 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            6 - 4
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 2
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/chicago.png">
+            <span>Bulls</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            29
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            34
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .460
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            16.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            23 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            18 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            11 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            3 - 7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/indiana.png">
+            <span>Pacers</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            28
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            36
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .438
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            18
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            19 - 18
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            18 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            10 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            3 - 7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/orlando.png">
+            <span>Magic</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            26
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            37
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .413
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            19.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            13 - 27
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            15 - 16
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            11 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            5 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/charlotte.png">
+            <span>Hornets</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            20
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            44
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .313
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            26
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            11 - 29
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            11 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            9 -25
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            5 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/detroit.png">
+            <span>Pistons</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            48
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .238
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            30.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            6 - 31
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            8 - 23
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            7 - 25
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            1 - 9
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 6
+          </td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+    <div></div>
+    <table id="standings-table_east" class="standings scroll standings__order-conference">
+      <caption class="standings__header">
+        <span>Western Conference</span>
+      </caption>
+      <thead>
+        <tr>
+          <th class="columns">
+            <span>Team</span>
+          </th>
+          <th class="columns">
+            <abbr>W</abbr>
+          </th>
+          <th class="columns">
+            <abbr>L</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Win%</abbr>
+          </th>
+          <th class="columns">
+            <abbr>GB</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Conf</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Div</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Home</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Road</abbr>
+          </th>
+          <th class="columns">
+           <abbr>OT</abbr>
+          </th>
+          <th class="columns">
+            <abbr>L10</abbr>
+          </th>
+          <th class="columns">
+            <abbr>Streak</abbr>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/denver.png">
+            <span>Nuggets</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            44
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .698
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            31 - 12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            28 - 4
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            16 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            7 - 3
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 2
+          </td>
+        </tr>
+        <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/memphis.png">
+            <span>Grizzlies</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            38
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            23
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .623
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            20 - 16
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            26 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            12 - 18
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            6 - 4
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 3
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/sacramento.png">
+            <span>Kings</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            36
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            25
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .590
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            24 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            18 - 12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            18 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            7 - 3
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 4
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/phoenix.png">
+            <span>Suns</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            34
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            29
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .540
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            10
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            22 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            21 - 10
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            13 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            7 - 3
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/golden state.png">
+            <span>Warriors</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            33
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            30
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .524
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            11
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            21 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            26 - 7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            7 - 23
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            6 - 4
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 4
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/dallas.png">
+            <span>Mavericks</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            33
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            31
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .516
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            11.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            24 - 17
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            21 - 12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            12 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            5 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/la.png">
+            <span>Clippers</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            33
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            32
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .508
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            12
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            19 - 20
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            15 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            18 - 17
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            4 - 6
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 4
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/minnesota.png">
+            <span>Timberwolves</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            32
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            32
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .500
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            12.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            23 - 20
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            20 - 14
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            12 - 18
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            4 - 6
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/utah.png">
+            <span>Jazz</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            31
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            32
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .492
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            21 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            20 - 13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            11 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            4 - 6
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/new orleans.png">
+            <span>Pelicans</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            31
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            32
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .492
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            20 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            20 - 11
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            11 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            5 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/los angeles.png">
+            <span>Lakers</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            30
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            33
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .476
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            14
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            17 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            15 - 14
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            15 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            5 - 5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 1
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/portland.png">
+            <span>Trail Blazers</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            29
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            33
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .468
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            14.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            21 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            17 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            12 - 18
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            3 - 7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 2
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/oklahoma city.png">
+            <span>Thunder</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            28
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            34
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .452
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            15.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            15 - 22
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            17 - 15
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            11 - 19
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            3 - 7
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 5
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/san antonio.png">
+            <span>Spurs</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            16
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            47
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .254
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            28
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            6 - 32
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            10 - 21
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            6 - 26
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            2 - 8
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            W 2
+          </td>
+        </tr>
+        <tr>
+          <tr>
+          <th class="columns">
+            <img src="NBA_Logos-master/houston.png">
+            <span>Rockets</span>
+          </th>
+          <td class="columns">
+            <span class="show-for-sr">Wins</span>
+            13
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Losses</span>
+            49
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Win Percentage</span>
+            .210
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Games Behind</span>
+            30.5
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Conference Record</span>
+            7 - 35
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Division Record</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Home Record</span>
+            8 - 22
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Road Record</span>
+            5 - 27
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">OT</span>
+            -
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Last Ten Record</span>
+            0 - 10
+          </td>
+          <td class="columns">
+            <span class="show-for-sr">Streak</span>
+            L 11
+          </td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!-- partial -->
+
+</body>
+</html>

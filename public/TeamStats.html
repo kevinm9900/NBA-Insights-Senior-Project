@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA INSIGHTS</title>
+  <link rel="stylesheet"
+      href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.10.1.min.css?ver=4.10.1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="swipe.css">
+  <link rel="stylesheet" href="swipe2.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="scores.css">
+</head>
+
+<body>
+
+  <!-- NAV MENU -->
+  <nav class="navbar navbar-light navbar-expand-md custom-header">
+      <div class="container-fluid">
+          <div class="navbar-end">
+              <div class="navbar-item">
+                  <a role="button" id="logo" href="/">
+                  </a>
+              </div>
+
+              <a role="button" class="navbar-burger burger" data-toggle="collapse" data-target="#navbar-collapse"
+                  aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+              </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+              <ul class="nav navbar-nav links">
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">HOME</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="scores.html">SCORES</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="news.html">NEWS</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="TeamStats.html">TEAM STATS</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="playerstats.html">PLAYER STATS</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="standings.html">STANDINGS</a></li>
+
+                  <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="#">TEAMS </a></li> -->
+                <!--  <li class="nav-item" role="presentation"><a class="nav-link custom-navbar" href="predictions.html">
+                          FAVORITES</span></a></li>-->
+                  <li class="nav-item" role="presentation">
+
+                  </li>
+              </ul>
+
+              <div class="navbar-item ml-auto" id="nav-buttons">
+                  <div class="buttons">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+  <!-- END NAV MENU -->
+
+    <!-- optional menu right side of header  -->
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-end">
+        <a class="navbar-item"></a>
+      </div>
+    </div>
+  </nav>
+
+  <!--column for finding a team  -->
+  <div class="columns">
+    <div class="column is-narrow">
+      <div class="box" style="width: 400px;">
+        <p class="title is-5">SEARCH BY TEAM</p>
+        <!-- teams in dropdown menu -->
+        <div class="dropdown is-hoverable">
+          <div class="select">
+            <select name="teamChoice" id="teamList" >
+              <option value="1">Atlanta Hawks</option>
+              <option value="2">Boston Celtics</option>
+              <option value="4">Brooklyn Nets</option>
+              <option value="5">Charlotte Hornets</option>
+              <option value="6">Chicago Bulls</option>
+              <option value="7">Cleveland Cavaliers</option>
+              <option value="10">Detroit Pistons</option>
+              <option value="15">Indiana Pacers</option>
+              <option value="20">Miami Heat</option>
+              <option value="21">Miluwakee Bucks</option>
+              <option value="24">New York Knicks</option>
+              <option value="26">Orlando Magic</option>
+              <option value="27">Philadelphia Seventy Sixers</option>
+              <option value="38">Toronto Raptors</option>
+              <option value="41">Washington Wizards</option>
+              <option value="8">Dallas Mavericks</option>
+              <option value="9">Denver Nuggets</option>
+              <option value="11">Golden State Warriors</option>
+              <option value="14">Houston Rockets</option>
+              <option value="16">Los Angeles Clippers</option>
+              <option value="17">Los Angeles Lakers</option>
+              <option value="19">Memphis Grizzlies</option>
+              <option value="22">Minnesota Timberwolves</option>
+              <option value="23">New Orleans Pelicans</option>
+              <option value="25">Oklahoma City Thunder</option>
+              <option value="28">Pheonix Suns</option>
+              <option value="29">Portland Trailblazers</option>
+              <option value="30">Sacramento Kings</option>
+              <option value="31">San Antonio Spurs</option>
+              <option value="40">Utah Jazz</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="box">
+      <p class="title is-5">2022/23 Team Stats</p>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3 class="statName">Points Scored</h3>
+          <p id="points"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Field Goal Percentage</h3>
+          <p id="fgp"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Rebounds</h3>
+         <p id="rebounds"></p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3 class="statName">Blocks</h3>
+         <p id="blocks"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Assists</h3>
+          <p id="assists"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Steals</h3>
+          <p id="steals"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="js/stats.js"></script>
+</body>
+
+</html>
